@@ -57,6 +57,10 @@ namespace Lab05Opcional
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel ResultText { get; set; }
 
+        [Action ("NumberTouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void NumberTouchUpInside (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
             if (NumberEight != null) {

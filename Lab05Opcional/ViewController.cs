@@ -15,47 +15,6 @@ namespace Lab05Opcional
         {
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
-
-            NumberOne.TouchUpInside += (object sender, EventArgs e) => 
-            {
-                ResultText.Text = ResultText.Text+"1";
-            };
-			NumberTwo.TouchUpInside += (object sender, EventArgs e) =>
-			{
-				ResultText.Text = ResultText.Text + "2";
-			};
-			NumberThree.TouchUpInside += (object sender, EventArgs e) =>
-			{
-				ResultText.Text = ResultText.Text + "3";
-			};
-			NumberFour.TouchUpInside += (object sender, EventArgs e) =>
-			{
-				ResultText.Text = ResultText.Text + "4";
-			};
-			NumberFive.TouchUpInside += (object sender, EventArgs e) =>
-			{
-				ResultText.Text = ResultText.Text + "5";
-			};
-			NumberSix.TouchUpInside += (object sender, EventArgs e) =>
-			{
-				ResultText.Text = ResultText.Text + "6";
-			};
-			NumberSeven.TouchUpInside += (object sender, EventArgs e) =>
-			{
-				ResultText.Text = ResultText.Text + "7";
-			};
-			NumberEight.TouchUpInside += (object sender, EventArgs e) =>
-			{
-				ResultText.Text = ResultText.Text + "8";
-			};
-			NumberNine.TouchUpInside += (object sender, EventArgs e) =>
-			{
-				ResultText.Text = ResultText.Text + "9";
-			};
-			NumberZero.TouchUpInside += (object sender, EventArgs e) =>
-			{
-				ResultText.Text = ResultText.Text + "0";
-			};
         }
 
         public override void DidReceiveMemoryWarning()
@@ -63,5 +22,10 @@ namespace Lab05Opcional
             base.DidReceiveMemoryWarning();
             // Release any cached data, images, etc that aren't in use.
         }
+
+		partial void NumberTouchUpInside(UIButton sender)
+		{
+			ResultText.Text += sender.Title(UIControlState.Normal);
+		}
     }
 }
